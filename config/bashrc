@@ -14,6 +14,7 @@ alias up-todo="nvim $TODO_DIR/todo.txt"
 alias todo="todo.sh -d $TODO_DIR/todo.cfg"
 
 export TODAY="$(date +%a)"
+. $HOME/.nix-profile/etc/profile.d/nix.sh
 
 PS1='Next task: $(todo.sh -d $TODO_DIR/todo.cfg ls @$TODAY | head -n 1)\n\
 Tasks left for today:\e[0;31m $(todo.sh -d $TODO_DIR/todo.cfg ls @$TODAY | tail -n+3 | wc -l) \e[m \n\
