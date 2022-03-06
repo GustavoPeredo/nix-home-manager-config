@@ -1,0 +1,24 @@
+export TODO_DIR="$HOME/.local/share/todo"
+
+if [ ! -f "$TODO_DIR/todo.cfg" ]; then
+  mkdir -p $TODO_DIR
+  cat > $TODO_DIR/todo.cfg <<EOF
+export TODO_DIR="$HOME/.local/share/todo"
+export TODO_FILE="$TODO_DIR/todo.txt"
+export DONE_FILE="$TODO_DIR/done.txt"
+export REPORT_FILE="$TODO_DIR/report.txt"
+EOF
+fi
+
+alias up-todo="nvim $TODO_DIR/todo.txt"
+alias todo="todo.sh -d $TODO_DIR/todo.cfg"
+
+export TODAY="$(date +%a)"
+
+PS1='Next task: $(todo.sh -d $TODO_DIR/todo.cfg ls @$TODAY | head -n 1)\n\
+Tasks left for today:\e[0;31m $(todo.sh -d $TODO_DIR/todo.cfg ls @$TODAY | tail -n+3 | wc -l) \e[m \n\
+Current Location: \e[0;32m \W \e[m \n\
+❯'
+
+
+
