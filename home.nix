@@ -30,6 +30,14 @@
 
     # coc workaround
     nodejs
+
+    # language-servers
+    rust-analyzer
+    cargo
+    rustc
+    clang-tools
+    nodePackages.typescript-language-server
+    python39Packages.python-lsp-server
   ];
 
   # Options
@@ -118,5 +126,6 @@
   home.file = {
     "${config.home.homeDirectory}/.local/share/konsole/konsole.colorscheme".source = ./config/konsole.colorscheme;
     "${config.home.homeDirectory}/.local/share/konsole/Profile 1.profile".source = ./config/konsole.profile;
+    "${config.home.homeDirectory}/.local/share/nvim/init.vim".source = ./config/nvim.conf;
   };
 }
