@@ -26,7 +26,7 @@
     neovim
     yank
     ranger
-    neogetch
+    neofetch
     # texlive.combined.scheme-full
     
   ];
