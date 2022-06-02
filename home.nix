@@ -8,7 +8,7 @@
       vimAlias = true;
       configure = {
         packages.myVimPackage = with pkgs.vimPlugins; {
-          start = [ vimtex goyo-vim vim-nix coc-nvim coc-css coc-json coc-tsserver coc-html coc-vimtex coc-python coc-clangd ];
+          start = [ vimtex goyo-vim vim-nix ];
         };
 	customRC = builtins.readFile ./config/nvim.conf;
       };
@@ -26,18 +26,9 @@
     neovim
     yank
     ranger
+    neogetch
     # texlive.combined.scheme-full
-
-    # coc workaround
-    nodejs
-
-    # language-servers
-    rust-analyzer
-    cargo
-    rustc
-    clang-tools
-    nodePackages.typescript-language-server
-    python39Packages.python-lsp-server
+    
   ];
 
   # Options
