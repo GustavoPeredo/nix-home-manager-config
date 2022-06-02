@@ -8,7 +8,7 @@
       vimAlias = true;
       configure = {
         packages.myVimPackage = with pkgs.vimPlugins; {
-          start = [ vimtex goyo-vim vim-nix ];
+          start = [ nvim-treesitter nvim-cmp cmp-treesitter ];
         };
 	customRC = builtins.readFile ./config/nvim.conf;
       };
