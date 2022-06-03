@@ -34,7 +34,7 @@ function __build_prompt {
         PS1+="${RED}?️️️${EXIT}${RESET} " # Add red if exit code non 0
     fi
     # this is the default prompt for 
-    PS1+="${BOLD_GRAY}\[\e[48;5;93m\]\[\e[38;5;27m\]\W ${RESET}\$ "
+    PS1+="${BOLD_GRAY}\[\e[48;5;93m\]\[\e[38;5;27m\] \W \ue0c4 ${RESET}\$ "
 }
 
 # set the prompt command
