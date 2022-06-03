@@ -1,6 +1,5 @@
 [Appearance]
 ColorScheme=konsole
-LineSpacing=8
 
 [General]
 Name=Profile 1
