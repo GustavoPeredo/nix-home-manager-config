@@ -13,7 +13,7 @@
 	customRC = builtins.readFile ./config/nvim.conf;
       };
     };
-    vscode-with-extensions = vscode-with-extensions.override {
+    vscode-with-extensions = super.vscode-with-extensions.override {
     	vscode = pkgs.vscodium;
     	vscodeExtensions = with pkgs.vscode-extensions; [
 		bbenoist.nix
