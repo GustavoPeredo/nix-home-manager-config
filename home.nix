@@ -13,6 +13,14 @@
 	customRC = builtins.readFile ./config/nvim.conf;
       };
     };
+    vscode-with-extensions = vscode-with-extensions.override {
+    	vscode = pkgs.vscodium;
+    	vscodeExtensions = with pkgs.vscode-extensions; [
+		bbenoist.nix
+		vscodevim.vim
+		github.copilot
+	];
+    };
     }) 
   ];
 
@@ -30,15 +38,9 @@
     yank
     ranger
     neofetch
+    vscode-with-extensions
     
-    vscode-with-extensions.override {
-    	vscode = pkgs.vscodium;
-    	vscodeExtensions = with pkgs.vscode-extensions; [
-		bbenoist.nix
-		vscodevim.vim
-		github.copilot
-	];
-    }
+    
     # texlive.combined.scheme-full
     
   ];
