@@ -22,7 +22,7 @@
     bash
     
     # Fixes copilot
-    nodejs
+    nodejs-16_x
 
     # Apps
     todo-txt-cli
