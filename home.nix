@@ -8,7 +8,7 @@
       vimAlias = true;
       configure = {
         packages.myVimPackage = with pkgs.vimPlugins; {
-          start = [ nvim-treesitter nvim-cmp cmp-treesitter copilot-vim pkgs.nodejs];
+          start = [ nvim-treesitter nvim-cmp cmp-treesitter copilot-vim];
         };
 	customRC = builtins.readFile ./config/nvim.conf;
       };
@@ -20,6 +20,9 @@
   home.packages = with pkgs; [
     # Shell
     bash
+    
+    # Fixes copilot
+    nodejs
 
     # Apps
     todo-txt-cli
