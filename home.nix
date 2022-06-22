@@ -38,7 +38,7 @@
 		vscodevim.vim
 		github.copilot
 	];
-    };
+    }
     # texlive.combined.scheme-full
     
   ];
